@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A843DC1F-1628-477D-80B4-09364197BDB3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Epic_Spell_Wars_Library</RootNamespace>
+    <AssemblyName>Epic Spell Wars Library</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Profile5</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .NET Framework is automatically included -->
+    <None Include="ClassDiagram1.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CardDecks.cs" />
+    <Compile Include="IQuestion.cs" />
+    <Compile Include="Library for Cards\Card.cs" />
+    <Compile Include="Library for Cards\Cards DeadWizardSpell\Class1.cs" />
+    <Compile Include="Library for Cards\Cards DeadWizardSpell\Class2.cs" />
+    <Compile Include="Library for Cards\Cards DeadWizardSpell\Class3.cs" />
+    <Compile Include="Library for Cards\Cards DeadWizardSpell\Class4.cs" />
+    <Compile Include="Library for Cards\Cards DeadWizardSpell\Class5.cs" />
+    <Compile Include="Library for Cards\Cards DeadWizardSpell\Class6.cs" />
+    <Compile Include="Library for Cards\Cards DeadWizardSpell\Class7.cs" />
+    <Compile Include="Library for Cards\Cards DeadWizardSpell\Class8.cs" />
+    <Compile Include="Library for Cards\Cards Delivery\Class1.cs" />
+    <Compile Include="Library for Cards\Cards Delivery\Class10.cs" />
+    <Compile Include="Library for Cards\Cards Delivery\Class11.cs" />
+    <Compile Include="Library for Cards\Cards Delivery\Class12.cs" />
+    <Compile Include="Library for Cards\Cards Delivery\Class13.cs" />
+    <Compile Include="Library for Cards\Cards Delivery\Class14.cs" />
+    <Compile Include="Library for Cards\Cards Delivery\Class15.cs" />
+    <Compile Include="Library for Cards\Cards Delivery\Class16.cs" />
+    <Compile Include="Library for Cards\Cards Delivery\Class17.cs" />
+    <Compile Include="Library for Cards\Cards Delivery\Class18.cs" />
+    <Compile Include="Library for Cards\Cards Delivery\Class19.cs" />
+    <Compile Include="Library for Cards\Cards Delivery\Class2.cs" />
+    <Compile Include="Library for Cards\Cards Delivery\Class20.cs" />
+    <Compile Include="Library for Cards\Cards Delivery\Class3.cs" />
+    <Compile Include="Library for Cards\Cards Delivery\Class4.cs" />
+    <Compile Include="Library for Cards\Cards Delivery\Class5.cs" />
+    <Compile Include="Library for Cards\Cards Delivery\Class6.cs" />
+    <Compile Include="Library for Cards\Cards Delivery\Class7.cs" />
+    <Compile Include="Library for Cards\Cards Delivery\Class8.cs" />
+    <Compile Include="Library for Cards\Cards Delivery\Class9.cs" />
+    <Compile Include="Library for Cards\Cards Quality\Boulder-iffic.cs" />
+    <Compile Include="Library for Cards\Cards Quality\Class1.cs" />
+    <Compile Include="Library for Cards\Cards Quality\Class10.cs" />
+    <Compile Include="Library for Cards\Cards Quality\Class11.cs" />
+    <Compile Include="Library for Cards\Cards Quality\Class12.cs" />
+    <Compile Include="Library for Cards\Cards Quality\Class13.cs" />
+    <Compile Include="Library for Cards\Cards Quality\Class14.cs" />
+    <Compile Include="Library for Cards\Cards Quality\Class15.cs" />
+    <Compile Include="Library for Cards\Cards Quality\Class16.cs" />
+    <Compile Include="Library for Cards\Cards Quality\Class17.cs" />
+    <Compile Include="Library for Cards\Cards Quality\Class18.cs" />
+    <Compile Include="Library for Cards\Cards Quality\Class19.cs" />
+    <Compile Include="Library for Cards\Cards Quality\Class2.cs" />
+    <Compile Include="Library for Cards\Cards Quality\Class3.cs" />
+    <Compile Include="Library for Cards\Cards Quality\Class4.cs" />
+    <Compile Include="Library for Cards\Cards Quality\Class5.cs" />
+    <Compile Include="Library for Cards\Cards Quality\Class6.cs" />
+    <Compile Include="Library for Cards\Cards Quality\Class7.cs" />
+    <Compile Include="Library for Cards\Cards Quality\Class8.cs" />
+    <Compile Include="Library for Cards\Cards Quality\Class9.cs" />
+    <Compile Include="Library for Cards\Cards Source\Class1.cs" />
+    <Compile Include="Library for Cards\Cards Source\Class10.cs" />
+    <Compile Include="Library for Cards\Cards Source\Class11.cs" />
+    <Compile Include="Library for Cards\Cards Source\Class12.cs" />
+    <Compile Include="Library for Cards\Cards Source\Class13.cs" />
+    <Compile Include="Library for Cards\Cards Source\Class14.cs" />
+    <Compile Include="Library for Cards\Cards Source\Class15.cs" />
+    <Compile Include="Library for Cards\Cards Source\Class16.cs" />
+    <Compile Include="Library for Cards\Cards Source\Class17.cs" />
+    <Compile Include="Library for Cards\Cards Source\Class18.cs" />
+    <Compile Include="Library for Cards\Cards Source\Class2.cs" />
+    <Compile Include="Library for Cards\Cards Source\Class3.cs" />
+    <Compile Include="Library for Cards\Cards Source\Class4.cs" />
+    <Compile Include="Library for Cards\Cards Source\Class5.cs" />
+    <Compile Include="Library for Cards\Cards Source\Class6.cs" />
+    <Compile Include="Library for Cards\Cards Source\Class7.cs" />
+    <Compile Include="Library for Cards\Cards Source\Class8.cs" />
+    <Compile Include="Library for Cards\Cards Source\Class9.cs" />
+    <Compile Include="Library for Cards\Cards Source\KingOberon.cs" />
+    <Compile Include="Library for Cards\Cards Source\TaiFoon%27s.cs" />
+    <Compile Include="Library for Cards\DeadWizardSpell.cs" />
+    <Compile Include="Library for Cards\Delivery.cs" />
+    <Compile Include="Library for Cards\Quality.cs" />
+    <Compile Include="Library for Cards\Source.cs" />
+    <Compile Include="Library for Cards\Spell.cs" />
+    <Compile Include="Library for Cards\Treasure.cs" />
+    <Compile Include="Library for Cards\WildMagic.cs" />
+    <Compile Include="Player.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Question.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Library for Cards\Cards Treasure\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Общие методы или методы менеджера.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

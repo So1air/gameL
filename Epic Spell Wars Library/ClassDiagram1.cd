@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Card">
+    <Position X="6" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="Epic_Spell_Wars_Library.Library_for_Cards.Card.MagicalGlyph">
+        <TypeIdentifier>
+          <NewMemberFileName>Library for Cards\Card.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAgAAAAAAAIAAAABACAAAAAJAAAAAABA=</HashCode>
+      <FileName>Library for Cards\Card.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.DeadWizardSpell">
+    <Position X="9.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>Library for Cards\DeadWizardSpell.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Delivery">
+    <Position X="2.75" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library for Cards\Delivery.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Quality">
+    <Position X="0.5" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library for Cards\Quality.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Source">
+    <Position X="5" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library for Cards\Source.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Spell">
+    <Position X="3.75" Y="6" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="Epic_Spell_Wars_Library.Library_for_Cards.Spell.Position">
+        <TypeIdentifier>
+          <NewMemberFileName>Library for Cards\Spell.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABECAAAAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>Library for Cards\Spell.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Treasure">
+    <Position X="11.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library for Cards\Treasure.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.WildMagic">
+    <Position X="7.25" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library for Cards\WildMagic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Epic_Spell_Wars_Library.Question">
+    <Position X="14.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAAAEAAAAIAAAACAAAAAA=</HashCode>
+      <FileName>Question.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
