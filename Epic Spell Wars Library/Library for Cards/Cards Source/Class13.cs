@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Epic_Spell_Wars_Library.Library_for_Cards.Cards_Source
 {
-    class Class13
+    class Class13 : Source
     {
     }
 }

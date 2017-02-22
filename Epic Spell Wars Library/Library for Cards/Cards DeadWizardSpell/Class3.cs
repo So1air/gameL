@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Epic_Spell_Wars_Library.Library_for_Cards.Cards_DeadWizardSpell
 {
-    class Class3
+    class Class3 : DeadWizardSpell
     {
     }
 }

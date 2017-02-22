@@ -42,7 +42,9 @@ namespace Epic_Spell_Wars_Library.Library_for_Cards
             protected set;
         }
 
-        private sealed Question QuestionOfChoice
+        private sealed Question QuestionOfChoice //a надо ли это свойство, ведь всё-равно оно изменяется и выдается 
+                                                 //только из метода GetQuestion(...), хотя нам же надо где-то 
+                                                 //хранить сформировавшиеся ответы
         {
             get;
             protected set;

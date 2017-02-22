@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Card">
-    <Position X="6" Y="0.5" Width="1.5" />
+    <Position X="78" Y="0.5" Width="1.5" />
     <Compartments>
       <Compartment Name="Nested Types" Collapsed="false" />
     </Compartments>
@@ -19,35 +19,35 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.DeadWizardSpell">
-    <Position X="9.5" Y="6" Width="1.5" />
+    <Position X="145.5" Y="6.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
       <FileName>Library for Cards\DeadWizardSpell.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Delivery">
-    <Position X="2.75" Y="10.25" Width="1.5" />
+    <Position X="66.75" Y="11.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Library for Cards\Delivery.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Quality">
-    <Position X="0.5" Y="10.25" Width="1.5" />
+    <Position X="21.75" Y="11.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Library for Cards\Quality.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Source">
-    <Position X="5" Y="10.25" Width="1.5" />
+    <Position X="111.75" Y="11.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Library for Cards\Source.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Spell">
-    <Position X="3.75" Y="6" Width="1.5" />
+    <Position X="68" Y="6.5" Width="1.5" />
     <Compartments>
       <Compartment Name="Nested Types" Collapsed="false" />
     </Compartments>
@@ -64,25 +64,522 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Treasure">
-    <Position X="11.75" Y="6" Width="1.5" />
+    <Position X="155.75" Y="6.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Library for Cards\Treasure.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.WildMagic">
-    <Position X="7.25" Y="10.25" Width="1.5" />
+    <Position X="135.5" Y="11.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Library for Cards\WildMagic.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Epic_Spell_Wars_Library.Question">
-    <Position X="14.25" Y="0.5" Width="1.5" />
+  <Class Name="Epic_Spell_Wars_Library.Question" Collapsed="true">
+    <Position X="158.25" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAAAEAAAAIAAAACAAAAAA=</HashCode>
+      <HashCode>AAAAQAAAAAAAAAAAAAAAAQAAAAEAAAAIAAAACAAAAEA=</HashCode>
       <FileName>Question.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="Epic_Spell_Wars_Library.CardDecks" Collapsed="true">
+    <Position X="158.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gggAAAIAAAAAAAYQIAAAEBAAAAACAgAAgDBAABAAgAQ=</HashCode>
+      <FileName>CardDecks.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Epic_Spell_Wars_Library.Player" Collapsed="true">
+    <Position X="160" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAFEAAAAIECAAAAAQAgABAIxAAIAABAAQAAQBAAA=</HashCode>
+      <FileName>Player.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Cards_DeadWizardSpell.Class1" Collapsed="true">
+    <Position X="142.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library for Cards\Cards DeadWizardSpell\Class1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Cards_DeadWizardSpell.Class2" Collapsed="true">
+    <Position X="144.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library for Cards\Cards DeadWizardSpell\Class2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Cards_DeadWizardSpell.Class3" Collapsed="true">
+    <Position X="146.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library for Cards\Cards DeadWizardSpell\Class3.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Cards_DeadWizardSpell.Class4" Collapsed="true">
+    <Position X="149" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library for Cards\Cards DeadWizardSpell\Class4.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Cards_DeadWizardSpell.Class5" Collapsed="true">
+    <Position X="151.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library for Cards\Cards DeadWizardSpell\Class5.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Cards_DeadWizardSpell.Class6" Collapsed="true">
+    <Position X="153.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library for Cards\Cards DeadWizardSpell\Class6.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Cards_DeadWizardSpell.Class7" Collapsed="true">
+    <Position X="137.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library for Cards\Cards DeadWizardSpell\Class7.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Cards_DeadWizardSpell.Class8" Collapsed="true">
+    <Position X="140" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library for Cards\Cards DeadWizardSpell\Class8.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Cards_Delivery.Class1" Collapsed="true">
+    <Position X="54.5" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library for Cards\Cards Delivery\Class1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Cards_Delivery.Class10" Collapsed="true">
+    <Position X="61.25" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library for Cards\Cards Delivery\Class10.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Cards_Delivery.Class11" Collapsed="true">
+    <Position X="68" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library for Cards\Cards Delivery\Class11.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Cards_Delivery.Class12" Collapsed="true">
+    <Position X="72.5" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library for Cards\Cards Delivery\Class12.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Cards_Delivery.Class13" Collapsed="true">
+    <Position X="77" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library for Cards\Cards Delivery\Class13.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Cards_Delivery.Class14" Collapsed="true">
+    <Position X="81.5" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library for Cards\Cards Delivery\Class14.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Cards_Delivery.Class15" Collapsed="true">
+    <Position X="86" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library for Cards\Cards Delivery\Class15.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Cards_Delivery.Class16" Collapsed="true">
+    <Position X="45.5" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library for Cards\Cards Delivery\Class16.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Cards_Delivery.Class17" Collapsed="true">
+    <Position X="50" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library for Cards\Cards Delivery\Class17.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Cards_Delivery.Class18" Collapsed="true">
+    <Position X="56.75" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library for Cards\Cards Delivery\Class18.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Cards_Delivery.Class19" Collapsed="true">
+    <Position X="63.5" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library for Cards\Cards Delivery\Class19.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Cards_Delivery.Class2" Collapsed="true">
+    <Position X="70.25" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library for Cards\Cards Delivery\Class2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Cards_Delivery.Class20" Collapsed="true">
+    <Position X="74.75" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library for Cards\Cards Delivery\Class20.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Cards_Delivery.Class3" Collapsed="true">
+    <Position X="79.25" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library for Cards\Cards Delivery\Class3.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Cards_Delivery.Class4" Collapsed="true">
+    <Position X="83.75" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library for Cards\Cards Delivery\Class4.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Cards_Delivery.Class5" Collapsed="true">
+    <Position X="88.25" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library for Cards\Cards Delivery\Class5.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Cards_Delivery.Class6" Collapsed="true">
+    <Position X="47.75" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library for Cards\Cards Delivery\Class6.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Cards_Delivery.Class7" Collapsed="true">
+    <Position X="52.25" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library for Cards\Cards Delivery\Class7.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Cards_Delivery.Class8" Collapsed="true">
+    <Position X="59" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library for Cards\Cards Delivery\Class8.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Cards_Delivery.Class9" Collapsed="true">
+    <Position X="65.75" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library for Cards\Cards Delivery\Class9.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Cards_Quality.Boulder_iffic" Collapsed="true">
+    <Position X="18.5" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>Library for Cards\Cards Quality\Boulder-iffic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Cards_Quality.Class1" Collapsed="true">
+    <Position X="25.25" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library for Cards\Cards Quality\Class1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Cards_Quality.Class10" Collapsed="true">
+    <Position X="32" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library for Cards\Cards Quality\Class10.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Cards_Quality.Class11" Collapsed="true">
+    <Position X="36.5" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library for Cards\Cards Quality\Class11.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Cards_Quality.Class12" Collapsed="true">
+    <Position X="41" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library for Cards\Cards Quality\Class12.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Cards_Quality.Class13" Collapsed="true">
+    <Position X="0.5" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library for Cards\Cards Quality\Class13.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Cards_Quality.Class14" Collapsed="true">
+    <Position X="5" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library for Cards\Cards Quality\Class14.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Cards_Quality.Class15" Collapsed="true">
+    <Position X="9.5" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library for Cards\Cards Quality\Class15.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Cards_Quality.Class16" Collapsed="true">
+    <Position X="14" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library for Cards\Cards Quality\Class16.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Cards_Quality.Class17" Collapsed="true">
+    <Position X="20.75" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library for Cards\Cards Quality\Class17.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Cards_Quality.Class18" Collapsed="true">
+    <Position X="27.5" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library for Cards\Cards Quality\Class18.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Cards_Quality.Class19" Collapsed="true">
+    <Position X="34.25" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library for Cards\Cards Quality\Class19.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Cards_Quality.Class2" Collapsed="true">
+    <Position X="38.75" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library for Cards\Cards Quality\Class2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Cards_Quality.Class3" Collapsed="true">
+    <Position X="43.25" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library for Cards\Cards Quality\Class3.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Cards_Quality.Class4" Collapsed="true">
+    <Position X="2.75" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library for Cards\Cards Quality\Class4.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Cards_Quality.Class5" Collapsed="true">
+    <Position X="7.25" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library for Cards\Cards Quality\Class5.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Cards_Quality.Class6" Collapsed="true">
+    <Position X="11.75" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library for Cards\Cards Quality\Class6.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Cards_Quality.Class7" Collapsed="true">
+    <Position X="16.25" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library for Cards\Cards Quality\Class7.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Cards_Quality.Class8" Collapsed="true">
+    <Position X="23" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library for Cards\Cards Quality\Class8.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Cards_Quality.Class9" Collapsed="true">
+    <Position X="29.75" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library for Cards\Cards Quality\Class9.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Cards_Source.Class1" Collapsed="true">
+    <Position X="117.5" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library for Cards\Cards Source\Class1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Cards_Source.Class10" Collapsed="true">
+    <Position X="124.25" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library for Cards\Cards Source\Class10.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Cards_Source.Class11" Collapsed="true">
+    <Position X="131" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library for Cards\Cards Source\Class11.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Cards_Source.Class12" Collapsed="true">
+    <Position X="90.5" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library for Cards\Cards Source\Class12.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Cards_Source.Class13" Collapsed="true">
+    <Position X="95" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library for Cards\Cards Source\Class13.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Cards_Source.Class14" Collapsed="true">
+    <Position X="99.5" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library for Cards\Cards Source\Class14.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Cards_Source.Class15" Collapsed="true">
+    <Position X="104" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library for Cards\Cards Source\Class15.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Cards_Source.Class16" Collapsed="true">
+    <Position X="108.5" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library for Cards\Cards Source\Class16.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Cards_Source.Class17" Collapsed="true">
+    <Position X="113" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library for Cards\Cards Source\Class17.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Cards_Source.Class18" Collapsed="true">
+    <Position X="119.75" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library for Cards\Cards Source\Class18.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Cards_Source.Class2" Collapsed="true">
+    <Position X="126.5" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library for Cards\Cards Source\Class2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Cards_Source.Class3" Collapsed="true">
+    <Position X="133.25" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library for Cards\Cards Source\Class3.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Cards_Source.Class4" Collapsed="true">
+    <Position X="92.75" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library for Cards\Cards Source\Class4.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Cards_Source.Class5" Collapsed="true">
+    <Position X="97.25" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library for Cards\Cards Source\Class5.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Cards_Source.Class6" Collapsed="true">
+    <Position X="101.75" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library for Cards\Cards Source\Class6.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Cards_Source.Class7" Collapsed="true">
+    <Position X="106.25" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library for Cards\Cards Source\Class7.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Cards_Source.Class8" Collapsed="true">
+    <Position X="110.75" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library for Cards\Cards Source\Class8.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Cards_Source.Class9" Collapsed="true">
+    <Position X="115.25" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library for Cards\Cards Source\Class9.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Cards_Source.KingOberon" Collapsed="true">
+    <Position X="122" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>Library for Cards\Cards Source\KingOberon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Epic_Spell_Wars_Library.Library_for_Cards.Cards_Source.TaiFoon_s" Collapsed="true">
+    <Position X="128.75" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>Library for Cards\Cards Source\TaiFoon's.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Epic_Spell_Wars_Library.IQuestion" Collapsed="true">
+    <Position X="158.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAABACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IQuestion.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

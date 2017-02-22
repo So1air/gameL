@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Epic_Spell_Wars_Library.Library_for_Cards.Cards_Quality
 {
-    class Class13
+    class Class13 : Quality
     {
     }
 }

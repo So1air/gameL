@@ -10,7 +10,7 @@ namespace Epic_Spell_Wars_Library.Library_for_Cards
     {
         public Quality(int id)
             : base(id)
-        {
+        {            
             base.PosInInvoke = Position.Mid;
         }
     }

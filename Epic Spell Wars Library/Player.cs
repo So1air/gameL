@@ -8,6 +8,7 @@ namespace Epic_Spell_Wars_Library
 {
     public class Player
     {
+        #region Константные параметры
         /// <summary>
         /// Количество заклинаний, в руке игрока в начале раунда.
         /// </summary>
@@ -20,16 +21,24 @@ namespace Epic_Spell_Wars_Library
         /// Максимально допустимый уровень здоровья игрового персонажа.
         /// </summary>
         public const byte MAX_HEALTH_WIZARD = 25;
+        /// <summary>
+        /// Количество граней игральной кости.
+        /// </summary>
+        private const sbyte COUNT_FACES_OF_DICE = 6;
+        #endregion
 
+        #region Вынести в менеджера
         /// <summary>
         /// Ник игрока в даной игровой сессии.
         /// </summary>
-        public sealed string _NickName;
+        public sealed string _NickName; //?
         /// <summary>
         /// Информация необходимая для коннекта с клиентским приложением игрока.
         /// </summary>
-        public string _ConnectionInfo;
+        public string _ConnectionInfo; //?
+        #endregion
 
+        #region Поля и свойства
         private int healthWizard = START_HEALTH_WIZARD;        
         /// <summary>
         /// Получает и задает текущее здоровье игрового персонажа.
@@ -58,12 +67,12 @@ namespace Epic_Spell_Wars_Library
             public get;
             private set;
         }
-      
+
         private List<ushort> _spellsOnHand = new List<ushort>();
         private byte maxCountSpells = START_COUNT_SPELLS;
 
         private List<ushort> _invoke = new List<ushort>(); //изменить на объект класса с инициативой соответственно равной заклинанию
-
+        
         public List<ushort> Invoke
         {
             get { return _invoke; }
@@ -79,14 +88,30 @@ namespace Epic_Spell_Wars_Library
                 return _invoke.Count == 0;
             }
         }
+        #endregion 
+
+
+        public void Reanimate() 
+        { }
+
+        public void DrawSpells(CardDecks currDecks) 
+        { }
+
+        public void DrawDeadWizardSpell(CardDecks currDecks)
+        { }
+
+        public void DrawTreasure(CardDecks currDecks)
+        { }
+
+        public int ThrowDice()
+        {
+            Random r = new Random();
+            return r.Next(1, 7);
+        }
+        void CreateInvoke(Spell spell_beg, Spell spell_mid, Spell spell_end);
 
         //?void? CastSpell(sbyte number_spell);
-        //?void? CastInvoke();
-        //?void? DrawSpells(CardDecks currDecks);
-        //?void? DrawDeadWizardSpell(CardDecks currDecks);
-        //?void? DrawTreasure(CardDecks currDecks);
-        //public int ThrowDice(); 
-        //?void? CreateInvoke(Spell spell_beg, Spell spell_mid, Spell spell_end);
+        //?void? CastInvoke();         
 
         public Player(string nick, string connection_info)
         {            

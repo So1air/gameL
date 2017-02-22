@@ -6,7 +6,7 @@ using System.Text;
 namespace Epic_Spell_Wars_Library.Library_for_Cards.Cards_Quality
 {
     //каменючный
-    sealed class Boulder_iffic : Delivery
+    sealed class Boulder_iffic : Quality
     {
         public sealed override void Play(sbyte ownerCard, Player[] players, CardDecks currDecks)
         {

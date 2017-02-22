@@ -11,6 +11,7 @@ namespace Epic_Spell_Wars_Library.Library_for_Cards
         public Source(int id)
             : base(id)
         {
+            base.Initiative = 0;
             base.PosInInvoke = Position.Beg;
         }
     }

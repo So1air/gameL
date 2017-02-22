@@ -8,19 +8,25 @@ namespace Epic_Spell_Wars_Library
     public class Question 
     {
         private sealed string text;
+        private string[] variantsAnswer;
+        private sbyte answerer;        
 
         public string Text
         {
             get { return text; }
             set { text = value; }
-        }
-
-        private string[] variantsAnswer;
+        }       
 
         public string[] VariantsAnswer
         {
             get { return variantsAnswer; }
             set { variantsAnswer = value; }
         }
+
+        public sbyte Answerer
+        {
+            get { return answerer; }
+            set { answerer = value; }
+        }        
     }
 }

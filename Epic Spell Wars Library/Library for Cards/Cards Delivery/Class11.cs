@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Epic_Spell_Wars_Library.Library_for_Cards.Cards_Delivery
 {
-    class Class11
+    class Class11 : Delivery
     {
     }
 }

@@ -16,7 +16,7 @@ namespace Epic_Spell_Wars_Library.Library_for_Cards
             End
         }
 
-        public sealed int? Initiative{ public get; private set; }
+        public sealed int? Initiative{ public get; protected set; }
 
         public sealed Position PosInInvoke
         {
