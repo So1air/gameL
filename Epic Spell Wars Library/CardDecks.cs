@@ -11,26 +11,26 @@ namespace Epic_Spell_Wars_Library
         public const ushort COUNT_SPELLS = 128;
         public const ushort COUNT_TREASURES = 25;
         public const ushort COUNT_DEADWIZARDSPELLS = 25;
-        public const ushort COUNT_CARDS = COUNT_SPELLS + COUNT_TREASURES + COUNT_DEADWIZARDSPELLS;
+        //public const ushort COUNT_CARDS = COUNT_SPELLS + COUNT_TREASURES + COUNT_DEADWIZARDSPELLS;
 
-        private sealed static Spell[] _allSpells = InitSpells();
-        private sealed static Treasure[] _allTreasures = InitTreasures();
-        private sealed static DeadWizardSpell[] _allDeadWizardSpells = InitDeadWizardSpells();
+        public readonly static Spell[] _allSpells = InitSpells();
+        public readonly static Treasure[] _allTreasures = InitTreasures();
+        public readonly static DeadWizardSpell[] _allDeadWizardSpells = InitDeadWizardSpells();
 
-        internal static Spell[] AllSpells
-        {
-            get { return CardDecks._allSpells; }            
-        }        
+        //internal static Spell[] AllSpells
+        //{
+        //    get { return CardDecks._allSpells; }            
+        //}        
 
-        internal static Treasure[] AllTreasures
-        {
-            get { return CardDecks._allTreasures; }            
-        }        
+        //internal static Treasure[] AllTreasures
+        //{
+        //    get { return CardDecks._allTreasures; }            
+        //}        
 
-        internal static DeadWizardSpell[] AllDeadWizardSpells
-        {
-            get { return CardDecks._allDeadWizardSpells; }            
-        }
+        //internal static DeadWizardSpell[] AllDeadWizardSpells
+        //{
+        //    get { return CardDecks._allDeadWizardSpells; }            
+        //}
 
         private static Spell[] InitSpells()
         {
@@ -59,12 +59,58 @@ namespace Epic_Spell_Wars_Library
             return result;
         }
 
-        private List<ushort> _currentDeckSpells = new List<ushort>(COUNT_SPELLS);
-        private List<ushort> _currentDeckTreasures = new List<ushort>(COUNT_TREASURES);
-        private List<ushort> _currentDeckDeadWizardSpells = new List<ushort>(COUNT_DEADWIZARDSPELLS);
+        private Stack<ushort> _currentDeckSpells = new Stack<ushort>(COUNT_SPELLS);
+        private Stack<ushort> _currentDeckTreasures = new Stack<ushort>(COUNT_TREASURES);
+        private Stack<ushort> _currentDeckDeadWizardSpells = new Stack<ushort>(COUNT_DEADWIZARDSPELLS);
 
-        private List<ushort> _deckDiscardSpells = new List<ushort>();
-        private List<ushort> _deckDiscardTreasures = new List<ushort>();
-        private List<ushort> _deckDiscardDeadWizardSpells = new List<ushort>();
+        private List<ushort> _deckDiscardSpells = InitList(COUNT_SPELLS); // можна попробовать изменить на SortedSet, чтобы элементы не повторялись
+        private List<ushort> _deckDiscardTreasures = InitList(COUNT_TREASURES); // можна попробовать изменить на SortedSet, чтобы элементы не повторялись
+        private List<ushort> _deckDiscardDeadWizardSpells = InitList(COUNT_DEADWIZARDSPELLS); // можна попробовать изменить на SortedSet, чтобы элементы не повторялись
+
+        public ushort GetSpell()
+        {
+            if (_currentDeckSpells.Count == 0)
+                ShuffleDeckSpells();
+             
+            return _currentDeckSpells.Pop();
+        }
+
+        //добавить методы GetDead...(), GetTrea...()
+        //         методы ThrowInRetreatTr...(), ThrowI...()
+        //         ShuffleDeckTrea...(), ShuffleDeckDea...()
+        public void ThrowInRetreatSpells(ushort disc_sp)
+        {
+            _deckDiscardSpells.Add(disc_sp);
+        }
+
+        //просто инициализация индексов для отбоя, то есть исходно индексов всех карт
+        private static List<ushort> InitList(ushort count)
+        {
+            List<ushort> list = new List<ushort>();
+            for (ushort i = 0; i < count; i++)
+            {
+                list.Add(i);
+            }
+            return list;
+        }
+        
+        //перетасовка
+        public void ShuffleDeckSpells()
+        {       
+            Random rand = new Random();
+            for (ushort i = 0; this._deckDiscardSpells.Count != 0;)   
+            {
+                i = (ushort)rand.Next(0, this._deckDiscardSpells.Count);
+                _currentDeckSpells.Push(_deckDiscardSpells[i]);
+                _deckDiscardSpells.RemoveAt(i);                
+            }   
+        }
+
+        public CardDecks() 
+        {
+            ShuffleDeckSpells(); //не факт, что логично в конструкторе, но всё же в остальных случаях будет перетасовка из отбоя
+            //ShuffleDeckTrea...(); 
+            //ShuffleDeckDea...()
+        }
     }
 }

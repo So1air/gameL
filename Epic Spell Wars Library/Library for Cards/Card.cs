@@ -18,7 +18,7 @@ namespace Epic_Spell_Wars_Library.Library_for_Cards
             Illusion = 5     //Кумар
         }
 
-        public sealed int Id 
+        public int Id 
         { 
             public get; 
             protected set;
@@ -36,13 +36,13 @@ namespace Epic_Spell_Wars_Library.Library_for_Cards
         //    protected set;
         //}
 
-        public sealed MagicalGlyph Glyph
+        public MagicalGlyph Glyph
         {
             get;
             protected set;
         }
 
-        private sealed Question QuestionOfChoice //a надо ли это свойство, ведь всё-равно оно изменяется и выдается 
+        private Question QuestionOfChoice //a надо ли это свойство, ведь всё-равно оно изменяется и выдается 
                                                  //только из метода GetQuestion(...), хотя нам же надо где-то 
                                                  //хранить сформировавшиеся ответы
         {

@@ -7,9 +7,9 @@ namespace Epic_Spell_Wars_Library
 {
     public class Question 
     {
-        private sealed string text;
+        private string text;
         private string[] variantsAnswer;
-        private sbyte answerer;        
+        private sbyte[] answerer;        
 
         public string Text
         {
@@ -23,7 +23,7 @@ namespace Epic_Spell_Wars_Library
             set { variantsAnswer = value; }
         }
 
-        public sbyte Answerer
+        public sbyte[] Answerer
         {
             get { return answerer; }
             set { answerer = value; }

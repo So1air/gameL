@@ -16,15 +16,16 @@ namespace Epic_Spell_Wars_Library.Library_for_Cards
             End
         }
 
-        public sealed int? Initiative{ public get; protected set; }
+        public readonly ushort? Initiative{ public get; protected set; }
 
-        public sealed Position PosInInvoke
+        public readonly Position PosInInvoke
         {
             public get;
             protected set;
         }
 
-        public virtual void ActionBeforeCreateInvoke(sbyte ownerCard, Player[] players, CardDecks currDecks);
+        //нашёл другое решение для неё
+        //public virtual void ActionBeforeCreateInvoke(sbyte ownerCard, Player[] players, CardDecks currDecks); //для карты Нетерпеливый
 
         public virtual void Play(/*тут должны быть переданы игроки и колода*/sbyte ownerCard, Player[] players, CardDecks currDecks);
 

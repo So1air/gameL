@@ -31,7 +31,7 @@ namespace Epic_Spell_Wars_Library
         /// <summary>
         /// Ник игрока в даной игровой сессии.
         /// </summary>
-        public sealed string _NickName; //?
+        public readonly string _NickName; //?
         /// <summary>
         /// Информация необходимая для коннекта с клиентским приложением игрока.
         /// </summary>
@@ -70,13 +70,29 @@ namespace Epic_Spell_Wars_Library
 
         private List<ushort> _spellsOnHand = new List<ushort>();
         private byte maxCountSpells = START_COUNT_SPELLS;
+        public readonly List<ushort> _treasures = new List<ushort>();
+        public readonly List<ushort> _deadWizardSpell = new List<ushort>();
 
         private List<ushort> _invoke = new List<ushort>(); //изменить на объект класса с инициативой соответственно равной заклинанию
-        
+        public ushort? InititiativeInvoke
+        {
+            get
+            {
+                ushort? max = 0;
+                foreach (ushort spell in _invoke)
+                    if (CardDecks._allSpells[spell].Initiative != null)
+                        if (CardDecks._allSpells[spell].Initiative > max)
+                            max = CardDecks._allSpells[spell].Initiative;
+                        else ;
+                    else return null;
+                return max;
+            }
+        }        
+
         public List<ushort> Invoke
         {
             get { return _invoke; }
-            set { _invoke = value; }
+            
         }
         /// <summary>
         /// Возвращает значение, указывающее ходил ли игрок в даном раунде.
@@ -90,16 +106,26 @@ namespace Epic_Spell_Wars_Library
         }
         #endregion 
 
-
-        public void Reanimate() 
+        #region Методы
+        //оживление, тут можна разыграть дохлых
+        public void Reanimate(/**/) //разбить на разные процедуры для каста каждого дохлого
         { }
 
+        //добираем руку
         public void DrawSpells(CardDecks currDecks) 
-        { }
+        {
+            while (_spellsOnHand.Count < maxCountSpells)
+            {
+                _spellsOnHand.Add(currDecks.GetSpell());
+                //возможно разыграть метод Draw() спэлла
+            }
+        }
 
+        //берём дохлого
         public void DrawDeadWizardSpell(CardDecks currDecks)
         { }
 
+        //берём сокровище
         public void DrawTreasure(CardDecks currDecks)
         { }
 
@@ -108,11 +134,32 @@ namespace Epic_Spell_Wars_Library
             Random r = new Random();
             return r.Next(1, 7);
         }
-        void CreateInvoke(Spell spell_beg, Spell spell_mid, Spell spell_end);
 
-        //?void? CastSpell(sbyte number_spell);
-        //?void? CastInvoke();         
+        public bool LayDownInInvoke(ushort ind_sp)
+        {
+            if (_invoke.Count == 3)
+                return false;
+            
+            foreach (ushort i in _invoke)
+                if(CardDecks._allSpells[ind_sp].PosInInvoke != Spell.Position.Uni)
+                    if (CardDecks._allSpells[ind_sp].PosInInvoke == CardDecks._allSpells[i].PosInInvoke)
+                        return false;                  
+            
+            _invoke.Add(ind_sp); //изменить так, чтобы добавляло в нужную позицию
+                   
+            _spellsOnHand.Remove(ind_sp);
+            return true;
+        }        
+        
+        //продумать методы перед кастом каждой карты спэлла
+        /*precastspell*/ 
+        /*castspell*/
+        //после каста последней карты _invoke сбросить карты _invoke в отбой, а значит в конце каста, именно в конце, проверять это 
 
+        //?void? CastSpell(sbyte number_spell, Player[] players, CardDecks currDecks); //метод-кандидат каста спэлла                
+        #endregion
+
+        //переделать
         public Player(string nick, string connection_info)
         {            
             _NickName = nick;
