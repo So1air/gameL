@@ -8,6 +8,7 @@ namespace Epic_Spell_Wars_Library
 {
     public class CardDecks
     {
+        #region Элементы уровня класса
         public const ushort COUNT_SPELLS = 128;
         public const ushort COUNT_TREASURES = 25;
         public const ushort COUNT_DEADWIZARDSPELLS = 25;
@@ -58,30 +59,18 @@ namespace Epic_Spell_Wars_Library
 
             return result;
         }
+        #endregion 
 
+        #region Элементы уровня объекта
+        //текущее состояние колод, которые в игре
         private Stack<ushort> _currentDeckSpells = new Stack<ushort>(COUNT_SPELLS);
         private Stack<ushort> _currentDeckTreasures = new Stack<ushort>(COUNT_TREASURES);
         private Stack<ushort> _currentDeckDeadWizardSpells = new Stack<ushort>(COUNT_DEADWIZARDSPELLS);
 
-        private List<ushort> _deckDiscardSpells = InitList(COUNT_SPELLS); // можна попробовать изменить на SortedSet, чтобы элементы не повторялись
-        private List<ushort> _deckDiscardTreasures = InitList(COUNT_TREASURES); // можна попробовать изменить на SortedSet, чтобы элементы не повторялись
-        private List<ushort> _deckDiscardDeadWizardSpells = InitList(COUNT_DEADWIZARDSPELLS); // можна попробовать изменить на SortedSet, чтобы элементы не повторялись
-
-        public ushort GetSpell()
-        {
-            if (_currentDeckSpells.Count == 0)
-                ShuffleDeckSpells();
-             
-            return _currentDeckSpells.Pop();
-        }
-
-        //добавить методы GetDead...(), GetTrea...()
-        //         методы ThrowInRetreatTr...(), ThrowI...()
-        //         ShuffleDeckTrea...(), ShuffleDeckDea...()
-        public void ThrowInRetreatSpells(ushort disc_sp)
-        {
-            _deckDiscardSpells.Add(disc_sp);
-        }
+        //отбои колод
+        private List<ushort> _deckDiscardSpells = InitList(COUNT_SPELLS); 
+        private List<ushort> _deckDiscardTreasures = InitList(COUNT_TREASURES); 
+        private List<ushort> _deckDiscardDeadWizardSpells = InitList(COUNT_DEADWIZARDSPELLS); 
 
         //просто инициализация индексов для отбоя, то есть исходно индексов всех карт
         private static List<ushort> InitList(ushort count)
@@ -92,6 +81,59 @@ namespace Epic_Spell_Wars_Library
                 list.Add(i);
             }
             return list;
+        }
+
+        //взятие карты из колоды
+        public ushort GetSpell()
+        {
+            if (_currentDeckSpells.Count == 0)
+                ShuffleDeckSpells();
+             
+            return _currentDeckSpells.Pop();
+        }
+
+        public ushort GetDeadWizardSpell()
+        {
+            if (_currentDeckDeadWizardSpells.Count == 0)
+                ShuffleDeckDeadWizardSpells();
+
+            return _currentDeckDeadWizardSpells.Pop();
+        }
+
+        public ushort GetTreasure()
+        {
+            if (_currentDeckTreasures.Count == 0)
+                ShuffleDeckTreasures();
+
+            return _currentDeckTreasures.Pop();
+        }       
+        
+        //возврат карты в отбой
+        public bool ThrowInRetreatSpells(ushort disc_sp)
+        {
+            if (_deckDiscardSpells.Contains(disc_sp))
+                return false;
+            else           
+                _deckDiscardSpells.Add(disc_sp);
+            return true;            
+        }
+
+        public bool ThrowInRetreatDeadWizardSpell(ushort disc_dws)
+        {
+            if (_deckDiscardDeadWizardSpells.Contains(disc_dws))
+                return false;
+            else           
+                _deckDiscardDeadWizardSpells.Add(disc_dws);
+            return true;
+        }
+
+        public bool ThrowInRetreat(ushort disc_tr)
+        {
+            if (_deckDiscardTreasures.Contains(disc_tr))
+                return false;
+            else 
+                _deckDiscardTreasures.Add(disc_tr);
+            return true;
         }
         
         //перетасовка
@@ -106,11 +148,34 @@ namespace Epic_Spell_Wars_Library
             }   
         }
 
+        public void ShuffleDeckDeadWizardSpells()
+        {
+            Random rand = new Random();
+            for (ushort i = 0; this._deckDiscardDeadWizardSpells.Count != 0; )
+            {
+                i = (ushort)rand.Next(0, this._deckDiscardDeadWizardSpells.Count);
+                _currentDeckDeadWizardSpells.Push(_deckDiscardDeadWizardSpells[i]);
+                _deckDiscardDeadWizardSpells.RemoveAt(i);
+            }
+        }
+
+        public void ShuffleDeckTreasures()
+        {
+            Random rand = new Random();
+            for (ushort i = 0; this._deckDiscardTreasures.Count != 0; )
+            {
+                i = (ushort)rand.Next(0, this._deckDiscardTreasures.Count);
+                _currentDeckTreasures.Push(_deckDiscardTreasures[i]);
+                _deckDiscardTreasures.RemoveAt(i);
+            }
+        }
+
         public CardDecks() 
         {
-            ShuffleDeckSpells(); //не факт, что логично в конструкторе, но всё же в остальных случаях будет перетасовка из отбоя
-            //ShuffleDeckTrea...(); 
-            //ShuffleDeckDea...()
+            ShuffleDeckSpells();         //не факт, что логично в конструкторе; но всё же в остальных случаях будет перетасовка из отбоя
+            ShuffleDeckDeadWizardSpells(); 
+            ShuffleDeckTreasures();
         }
+        #endregion
     }
 }

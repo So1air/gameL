@@ -68,12 +68,13 @@ namespace Epic_Spell_Wars_Library
             private set;
         }
 
-        private List<ushort> _spellsOnHand = new List<ushort>();
         private byte maxCountSpells = START_COUNT_SPELLS;
-        public readonly List<ushort> _treasures = new List<ushort>();
-        public readonly List<ushort> _deadWizardSpell = new List<ushort>();
+        private List<ushort> _spellsOnHand = new List<ushort>();        
+        private List<ushort> _treasures = new List<ushort>();
+        private List<ushort> _deadWizardSpells = new List<ushort>();
 
-        private List<ushort> _invoke = new List<ushort>(); //изменить на объект класса с инициативой соответственно равной заклинанию
+
+        private List<ushort> _invoke = new List<ushort>();
         public ushort? InititiativeInvoke
         {
             get
@@ -107,6 +108,33 @@ namespace Epic_Spell_Wars_Library
         #endregion 
 
         #region Методы
+        //посмотреть спэллы в руке(например, для менеджера игры нужно)
+        public List<int> PeekSpellsOnHand()
+        {
+            List<int> IDs_spells = new List<int>();
+            foreach(ushort sp in _spellsOnHand)
+                IDs_spells.Add(CardDecks._allSpells[sp].Id);
+            return IDs_spells;
+        }
+
+        //посмотреть спэллы дохлых
+        public List<int> PeekDeadWizardSpells()
+        {
+            List<int> IDs_deadWizardSpells = new List<int>();
+            foreach (ushort dwsp in _deadWizardSpells)
+                IDs_deadWizardSpells.Add(CardDecks._allDeadWizardSpells[dwsp].Id);
+            return IDs_deadWizardSpells;
+        }
+
+        //посмотреть сокровища
+        public List<int> PeekTreasures()
+        {
+            List<int> IDs_treasures = new List<int>();
+            foreach (ushort tr in _treasures)
+                IDs_treasures.Add(CardDecks._allTreasures[tr].Id);
+            return IDs_treasures;
+        }
+
         //оживление, тут можна разыграть дохлых
         public void Reanimate(/**/) //разбить на разные процедуры для каста каждого дохлого
         { }
