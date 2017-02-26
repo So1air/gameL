@@ -6,7 +6,7 @@ using Epic_Spell_Wars_Library.Library_for_Cards;
 
 namespace Epic_Spell_Wars_Library
 {
-    public class Player
+    public class Player // : IEnemy_sView
     {
         #region Константные параметры
         /// <summary>
@@ -39,6 +39,9 @@ namespace Epic_Spell_Wars_Library
         #endregion
 
         #region Поля и свойства
+        //поле для определения индекса в массиве игроков
+        private readonly sbyte _placeOnBattleField; 
+
         private int healthWizard = START_HEALTH_WIZARD;        
         /// <summary>
         /// Получает и задает текущее здоровье игрового персонажа.
@@ -66,13 +69,12 @@ namespace Epic_Spell_Wars_Library
         {
             public get;
             private set;
-        }
+        } 
 
         private byte maxCountSpells = START_COUNT_SPELLS;
         private List<ushort> _spellsOnHand = new List<ushort>();        
         private List<ushort> _treasures = new List<ushort>();
         private List<ushort> _deadWizardSpells = new List<ushort>();
-
 
         private List<ushort> _invoke = new List<ushort>();
         public ushort? InititiativeInvoke
@@ -90,10 +92,9 @@ namespace Epic_Spell_Wars_Library
             }
         }        
 
-        public List<ushort> Invoke
+        public List<ushort> Invoke                           //думаю, ошибочно предоставлять такой доступ
         {
-            get { return _invoke; }
-            
+            get { return _invoke; }            
         }
         /// <summary>
         /// Возвращает значение, указывающее ходил ли игрок в даном раунде.
@@ -135,6 +136,51 @@ namespace Epic_Spell_Wars_Library
             return IDs_treasures;
         }
 
+        //посмотреть заклинание
+        public int[] PeekInvoke()
+        {
+            int[] res = new int[_invoke.Count];
+            int i = -1;
+            foreach(ushort sp in _invoke)
+                res[++i] = CardDecks._allSpells[sp].Id;
+
+            return res;
+        }
+
+        //подсчёт уникального количества знаков в заклинании(а также в сокровищах)
+        public sbyte CountUniqueGlyphsInInvoke()
+        {
+            sbyte res = 0;
+            sbyte counter_glyph;
+            List<ushort> spellsInInvoke_and_treasure = new List<ushort>(_invoke);
+            spellsInInvoke_and_treasure.AddRange(_treasures);                           //может быть ошибка
+            List<Card.MagicalGlyph> glyphs = Card.AllGlyphs();
+            foreach(Card.MagicalGlyph gl in glyphs){
+                counter_glyph = 0;
+                foreach (ushort j in spellsInInvoke_and_treasure)
+                    if (gl == CardDecks._allSpells[j].Glyph)
+                        counter_glyph++;
+                if (counter_glyph == 1)
+                    res++;
+            }            
+
+            return res;
+        }
+
+        //подсчёт количества встречаний определённого знака в заклинании
+        public sbyte CountTheGlyphInInvoke(Card.MagicalGlyph m_gl)
+        {
+            sbyte counter = 0;
+            foreach (ushort sp in _invoke)
+                if (CardDecks._allSpells[sp].Glyph == m_gl)
+                    counter++;
+            foreach (ushort tr in _treasures)
+                if (CardDecks._allTreasures[tr].Glyph == m_gl)
+                    counter++;
+            
+            return counter;
+        }
+
         //оживление, тут можна разыграть дохлых
         public void Reanimate(/**/) //разбить на разные процедуры для каста каждого дохлого
         { }
@@ -151,18 +197,25 @@ namespace Epic_Spell_Wars_Library
 
         //берём дохлого
         public void DrawDeadWizardSpell(CardDecks currDecks)
-        { }
+        {
+            _deadWizardSpells.Add(currDecks.GetDeadWizardSpell());
+        }
 
         //берём сокровище
         public void DrawTreasure(CardDecks currDecks)
-        { }
+        {
+            _treasures.Add(currDecks.GetTreasure());
+            //разыграть метод Draw() для сокровища
+        }
 
+        //бросок кубика
         public int ThrowDice()
         {
             Random r = new Random();
-            return r.Next(1, 7);
+            return r.Next(1, COUNT_FACES_OF_DICE + 1);
         }
 
+        //составление заклинания
         public bool LayDownInInvoke(ushort ind_sp)
         {
             if (_invoke.Count == 3)
@@ -173,25 +226,95 @@ namespace Epic_Spell_Wars_Library
                     if (CardDecks._allSpells[ind_sp].PosInInvoke == CardDecks._allSpells[i].PosInInvoke)
                         return false;                  
             
-            _invoke.Add(ind_sp); //изменить так, чтобы добавляло в нужную позицию
-                   
+            if (_invoke.Count == 0)
+                _invoke.Add(ind_sp); 
+            else 
+                if (_invoke.Count == 1)
+                    switch (CardDecks._allSpells[ind_sp].PosInInvoke)
+                    {
+                        case Spell.Position.Beg:
+                            _invoke.Insert(0, ind_sp);
+                            break;
+
+                        case Spell.Position.Mid: 
+                        case Spell.Position.Uni:
+                            if (CardDecks._allSpells[_invoke[0]].PosInInvoke == Spell.Position.End)
+                                _invoke.Insert(0, ind_sp);
+                            else _invoke.Add(ind_sp);
+                            break;
+
+                        case Spell.Position.End:
+                            _invoke.Add(ind_sp);
+                            break;                            
+                    }
+                else
+                    switch (CardDecks._allSpells[ind_sp].PosInInvoke)
+                    { 
+                        case Spell.Position.Beg:
+                            if ((CardDecks._allSpells[_invoke[0]].PosInInvoke == Spell.Position.Uni)
+                                    && (CardDecks._allSpells[_invoke[1]].PosInInvoke == Spell.Position.Mid))
+                            {
+                                _invoke.Add(_invoke[0]);
+                                _invoke[0] = ind_sp;
+                            }
+                            else _invoke.Insert(0, ind_sp);
+                            break;
+ 
+                        case Spell.Position.Mid:
+                            _invoke.Insert(1, ind_sp);
+                            break;
+
+                        case Spell.Position.End:
+                            _invoke.Add(ind_sp);
+                            break;
+
+                        case Spell.Position.Uni:
+                            switch (CardDecks._allSpells[_invoke[0]].PosInInvoke)
+                            {
+                                case Spell.Position.Beg:
+                                    if (CardDecks._allSpells[_invoke[1]].PosInInvoke == Spell.Position.End)
+                                        _invoke.Insert(1, ind_sp);
+                                    else _invoke.Add(ind_sp);
+                                    break;
+
+                                case Spell.Position.Mid:
+                                    _invoke.Insert(0, ind_sp);
+                                    break;
+
+                                case Spell.Position.Uni:
+                                    if (CardDecks._allSpells[_invoke[1]].PosInInvoke == Spell.Position.End)
+                                        _invoke.Insert(1, ind_sp);
+                                    else _invoke.Add(ind_sp);
+                                    break;
+                            }
+                            break;
+                    }
+
             _spellsOnHand.Remove(ind_sp);
             return true;
-        }        
-        
+        }
+
+        public bool DelSpellFromInvoke(int number) //дописать
+        {
+            return true;
+        }
+
         //продумать методы перед кастом каждой карты спэлла
         /*precastspell*/ 
         /*castspell*/
         //после каста последней карты _invoke сбросить карты _invoke в отбой, а значит в конце каста, именно в конце, проверять это 
 
-        //?void? CastSpell(sbyte number_spell, Player[] players, CardDecks currDecks); //метод-кандидат каста спэлла                
+        //?void? CastSpell(sbyte number_spell, Player[] players, CardDecks currDecks); //метод-кандидат каста спэлла
+        
         #endregion
 
         //переделать
-        public Player(string nick, string connection_info)
+        public Player(string nick, string connection_info, sbyte place)
         {            
             _NickName = nick;
             _ConnectionInfo = connection_info;
+            IsLive = true;
+            _placeOnBattleField = place;
         }
     }
 }

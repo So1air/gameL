@@ -18,7 +18,19 @@ namespace Epic_Spell_Wars_Library.Library_for_Cards
             Illusion = 5     //Кумар
         }
 
-        public int Id 
+        //все существенные знаки -- без элемента None
+        public static List<MagicalGlyph> AllGlyphs()
+        {
+            List<MagicalGlyph> res = new List<MagicalGlyph>();
+            for(int i = 1; i < 6; i++)
+                res.Add((MagicalGlyph)i);
+
+            return res;
+        }
+
+        /*идентификатор карты(предполагаемое использование -- для определения класса карты в целях отображения пользователю на клиенте 
+        соответствующих изображений; сами же классы конкретных карт будут недоступны вне библиотеки(сборки)) */
+        public readonly int Id 
         { 
             public get; 
             protected set;
@@ -50,15 +62,18 @@ namespace Epic_Spell_Wars_Library.Library_for_Cards
             protected set;
         }
 
-        public virtual Question GetQuestion(sbyte ownerCard, Player[] players, CardDecks currDecks);
+        public virtual Question GetQuestion(sbyte ownerCard, Player[] players, CardDecks currDecks) { return null; }
 
-        public virtual bool Choice(int number_choice) { return true; }
+        public virtual bool Choice(int number_choice) 
+        { 
+            return true; //возврат оценки корректности ответа number_choice 
+        }
 
-        public virtual void Draw(/*тут должны быть переданы игроки и колода*/) { }
+        public virtual void Draw(sbyte ownerCard, Player[] players, CardDecks currDecks) { }
 
-        public virtual void OpenInvoke(/*тут должны быть переданы игроки и колода*/) { }        
+        public virtual void OpenInvoke(sbyte ownerCard, Player[] players, CardDecks currDecks) { }
 
-        public virtual void Discard(/*тут должны быть переданы игроки и колода*/) { }
+        public virtual void Discard(sbyte ownerCard, Player[] players, CardDecks currDecks) { }
 
         public Card(int id)
         {
